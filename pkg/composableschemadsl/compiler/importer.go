@@ -2,8 +2,8 @@ package compiler
 
 import (
 	"fmt"
-	"path"
 	"os"
+	"path"
 
 	"github.com/authzed/spicedb/pkg/composableschemadsl/input"
 	"github.com/authzed/spicedb/pkg/genutil/mapz"

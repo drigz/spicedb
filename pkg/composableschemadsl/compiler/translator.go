@@ -23,7 +23,7 @@ type translationContext struct {
 	mapper           input.PositionMapper
 	schemaString     string
 	skipValidate     bool
-	existingNames []string
+	existingNames    []string
 }
 
 func (tctx translationContext) prefixedPath(definitionName string) (string, error) {

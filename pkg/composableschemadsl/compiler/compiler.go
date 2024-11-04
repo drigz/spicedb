@@ -52,7 +52,7 @@ func (cs CompiledSchema) SourcePositionToRunePosition(source input.Source, posit
 type config struct {
 	skipValidation   bool
 	objectTypePrefix *string
-	existingNames []string
+	existingNames    []string
 }
 
 func SkipValidation() Option { return func(cfg *config) { cfg.skipValidation = true } }
@@ -99,7 +99,7 @@ func Compile(schema InputSchema, prefix ObjectPrefixOption, opts ...Option) (*Co
 		mapper:           mapper,
 		schemaString:     schema.SchemaString,
 		skipValidate:     cfg.skipValidation,
-		existingNames: cfg.existingNames,
+		existingNames:    cfg.existingNames,
 	}, root)
 	if err != nil {
 		var errorWithNode errorWithNode
